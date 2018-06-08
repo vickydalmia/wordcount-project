@@ -1,0 +1,12 @@
+<h1>Welcome To Counter</h1>
+
+<p>There are total <b>{{inputTextListLength}}</b> in your provided text</p>
+<a href={% url 'home' %}>Satrt Again</a>
+<h3>Your provided text is below</h3>
+<p>{{inputText}}</p>
+
+<h3> Words According to their presence</h3>
+{% for word, count in sameWordCount %}
+
+<p>{{word}}-{{count}}</p>
+{% endfor %}
